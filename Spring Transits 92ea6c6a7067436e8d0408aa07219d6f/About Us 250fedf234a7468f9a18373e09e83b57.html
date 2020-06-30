@@ -1,0 +1,623 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About Us</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="250fedf2-34a7-468f-9a18-373e09e83b57" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="About%20Us%20250fedf234a7468f9a18373e09e83b57/About_Us.png"/></div><h1 class="page-title">About Us</h1></header><div class="page-body"><p id="36a9a299-3e87-4a5a-abba-63791a8f21db" class="">We believe communities hold the power to nurture individual members to scale heights, we are creating an ecosystem that will enable women, minorities and marginalized individuals to (re)enter workforce with confidence and right skills. </p><h1 id="28af7668-2003-4377-a629-ddf78c5c3c0f" class="">🧭 Mission</h1><p id="4c23c907-2491-4ef1-9f42-e49d0e0fcfa1" class="">Rebuild confidence, skills, attitude in women who are looking to rejoin workforce. </p><h1 id="e6a95623-53ab-43a4-aae4-5ba412503bfd" class="">🔭 Vision</h1><p id="0f144f5b-6a63-4b20-825a-f8fdb3a1a9fe" class="">Our vision is to be world&#x27;s most women-centric company; to build a place where women can come together in a community to develop, re-skill and contribute to the technical products and services.</p><h1 id="f055e2c9-ab44-40ec-a978-b2b9215eec22" class="">⚖️ Values</h1><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5a93e441-d945-48a2-b69e-b007400c886f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">We have borrowed our values from <a href="https://www.aboutamazon.com/working-at-amazon/our-leadership-principles">Amazon</a> and <a href="https://www.microsoft.com/en-us/about/values">Microsoft</a>, we believe they are universal and will help build the culture we aspire for. </div></figure><h2 id="7c3fc6ad-d72b-44a0-9832-5db283d839dd" class="">Ownership</h2><p id="955e49d7-a199-4a74-95ca-9326cf42d784" class="">We think long term and don&#x27;t sacrifice long-term value for short-term gains. They act on behalf of the community. They never say &quot;that&#x27;s not my job.&quot;</p><h2 id="2321fb20-e6f4-414c-90fa-b1356ae3f1ea" class="">Invent and Simplify</h2><p id="831fe706-9f8c-428d-9b6b-170244134671" class="">We will always find ways to simplify and innovate. They cross pollinate ideas for all walks of life. We experiment, learn from our failures and understand that this is a marathon and not a sprint.</p><h2 id="8b342005-1684-458e-ba84-4d80df392f92" class="">Learn and Be Curious</h2><p id="c844bfa9-d9f4-4dd7-80c5-75032b282f30" class="">We are forever students, learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.</p><h2 id="e4218fc6-10b8-4b3e-a493-66b455569831" class="">Insist on the Highest Standards</h2><p id="751cc371-9e2d-4767-84dd-f529b8402754" class="">We believe in high standards, they are continually raising the bar and driving their community to deliver high-quality products, services, and processes. Team members ensure that problems are fixed properly and they stay fixed.</p><h2 id="310e5077-070d-4ec8-abc2-83d507c3df6a" class="">Think Big</h2><p id="9b400801-cbbe-4f30-8173-5b8d4435a3fd" class="">We create and communicate audacious goals that inspire results. They think differently and look around corners for ways to serve customers.</p><h2 id="b023eeda-ca78-4058-aa53-930711ab3eb2" class="">Bias for Action</h2><p id="0693e7fa-a7e1-4c4c-b678-ac1929f48e5d" class="">Speed matters, many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.</p><h2 id="baae9374-a433-45c7-9196-ae30f992f020" class="">Earn Trust</h2><p id="a88777c8-46e6-42ba-b0fd-932baea8dc8f" class="">We listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is not well understood. They benchmark themselves and their teams against the best.</p><h2 id="7cdf5088-1295-44a1-afdd-420c7ad54f91" class="">Detail Oriented </h2><p id="fa5563fb-7ba2-443d-8e17-2de1ef5a5007" class="">We stay connected to the details, audit frequently, and are curious when metrics and anecdote differ. No task is beneath them.</p><h2 id="b9ca08f7-4ba7-4703-aa95-043a7ca45291" class="">Standup for what they believe in; Disagree and Commit</h2><p id="b3ac0aaf-d3a7-4fbb-a3f6-575d161d2189" class="">We respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. They have conviction and are tenacious. They do not compromise for the sake fitting in. Once a decision is determined, they commit wholly.</p><h2 id="ad873d23-5ae8-4a8f-b193-708f1dec1fb1" class="">Deliver Results</h2><p id="477bae9c-a0b5-417d-b73d-d141447d7e76" class="">We focus on the key inputs for their workload and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle.</p><h2 id="58481f5f-c7d1-4d14-9bcc-2612b032e7aa" class=""><strong>Innovation</strong></h2><p id="ced9f025-b2dd-4da7-b501-5310391a48b1" class="">We believe technology can and should be a force for good and that meaningful innovation can and will contribute to a brighter world in big and small ways.</p><h2 id="9427a205-1c56-487c-8fa2-744bdbab31cf" class="">Artificial Intelligence (<strong>AI)</strong></h2><p id="2c77206c-4ed0-4218-8aad-291896f19c19" class="">We believe that, when designed with people at the center, AI can extend your capabilities, free you up for more creative and strategic endeavors, and help you or your organization achieve more.</p><h3 id="47c78d12-e299-49c7-a94a-dc6ec3c54da2" class="block-color-gray_background">  <a href="https://www.notion.so/springtransits/Copy-of-Spring-Transits-Web-Site-92ea6c6a7067436e8d0408aa07219d6f"><strong>Home</strong></a><strong>   </strong><a href="https://www.notion.so/springtransits/Mentors-e74b70c1a67f4131a0c96d444c9e35d8"><strong>Mentors </strong></a><strong>  </strong><a href="https://www.notion.so/springtransits/Blog-245a97b30b784dc7ad1631fd4ca1fd5f"><strong>Blog</strong></a><strong>   </strong><a href="https://www.notion.so/springtransits/How-this-works-443ff95f2ed6477ea50fca82e93d7c25"><strong>How It Works</strong></a><strong>   </strong><a href="https://www.notion.so/springtransits/About-Us-250fedf234a7468f9a18373e09e83b57"><strong>About Us</strong></a><strong>   </strong><a href="https://www.notion.so/springtransits/Pods-11306f04c99046ae8daa8733702e3ae1"><strong>Pods</strong></a><strong>   </strong><a href="https://www.notion.so/springtransits/Team-7dd4600e50894fe1b0f418fb8947719b"><strong>Team</strong></a></h3><p id="95674976-b337-48b1-ac09-bb6dcd7d78f5" class="">
+</p></div></article></body></html>
